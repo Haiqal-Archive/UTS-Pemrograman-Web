@@ -1,6 +1,6 @@
 # 📖 Tugas UTS | Portofolio
 
-**Live Demo:** https://haiqalaly.github.io/TugasProfileBootstrap/
+**Live Demo:** https://haiqalaly.github.io/TugasProfileBootstrap
 
 ## ℹ️ Deskripsi
 Proyek ini adalah halaman Portofolio Pribadi single-page yang dikembangkan sebagai tugas Ujian Tengah Semester (UTS) untuk mata kuliah Pemrograman Web. 
@@ -11,12 +11,12 @@ Aspek interaktif dan dinamis diimplementasikan menggunakan jQuery.
 
 ## ✨ Fitur Utama
 - **Navigasi Sticky dan Responsif** — Bilah navigasi yang menempel (sticky) dan mendukung tampilan mobile menggunakan Bootstrap.
-- **Smooth Scrolling** — Animasi pergerakan halus ke setiap `section` menggunakan jQuery.
+- **Smooth Scrolling** — Animasi pergerakan halus ke setiap section menggunakan jQuery.
 - **Efek Scroll Reveal** — Elemen muncul dengan animasi fade-in & slide-up saat memasuki viewport.
 - **Tombol Scroll-to-Top** — Tombol muncul setelah scrolling dan membawa pengguna kembali ke atas.
 - **Dark Mode** — Penggantian tema terang/gelap yang disimpan melalui LocalStorage.
 
-## 💡 Pembelajaran
+## 🎓 Pembelajaran
 - Penguasaan Framework CSS (Bootstrap)
 - Praktik JavaScript & jQuery
 - Pengembangan User Experience (UX) dan Aksesibilitas
@@ -33,7 +33,7 @@ Aspek interaktif dan dinamis diimplementasikan menggunakan jQuery.
 ## 🚀 Cara Menjalankan
 1. Clone repository ini  
 2. Buka `index.html` di browser  
-3. Selesai — tidak perlu instalasi tambahan
+3. Selesai
 
-## 📝 Catatan
+## 📋 Catatan
 Proyek ini dibuat untuk memenuhi tugas UTS Pemrograman Web dan difokuskan pada penggunaan Bootstrap, jQuery, serta implementasi fitur interaktif dasar.
