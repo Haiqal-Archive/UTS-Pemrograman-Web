@@ -103,15 +103,78 @@
     $(window).scroll(function() {
         checkScrollReveal();
     });
+
+    // === APPLY SAVED THEME ON LOAD ===
+    if (localStorage.getItem("theme") === "dark") {
+        applyDarkMode();
+    }
+
+    // === TOGGLE WHEN BUTTON CLICKED ===
+    $("#theme-toggle").on("click", function () {
+        if (localStorage.getItem("theme") === "dark") {
+            applyLightMode();
+        } else {
+            applyDarkMode();
+        }
+    });
+
+    // === FUNCTIONS ===
+
+    function applyDarkMode() {
+        $("body").addClass("dark-mode");
+
+        $("section, header").each(function () {
+            $(this)
+                .removeClass("bg-light")
+                
+        });
+
+        $(".card").each(function () {
+            $(this).addClass("dark-card");
+        });
+
+        $("#theme-toggle")
+            .text("Light Mode")
+            .removeClass("btn-outline-light")
+            .addClass("btn-outline-warning");
+
+        localStorage.setItem("theme", "dark");
+    }
+
+    function applyLightMode() {
+        $("body").removeClass("dark-mode");
+
+        $("section").each(function () {
+            $(this)
+                .removeClass("bg-dark text-white")
+                .addClass("bg-light");
+        });
+
+        $(".card").each(function () {
+            $(this).removeClass("dark-card");
+        });
+
+        $("#theme-toggle")
+            .text("Dark Mode")
+            .removeClass("btn-outline-warning")
+            .addClass("btn-outline-light");
+
+        localStorage.setItem("theme", "light");
+    }
     
 });
 
 function kirim_pesan(){
     var nama = $("#input-nama").val();
     var email = $("#input-email").val();
-    var nomor_hp = $("#nomor_hp").val();
     var pesan = $("#pesan").val();
-    // var link = `https://api.whatsapp.com/send?phone=6288973292196&text=Hi%2C%20saya%20dapat%20kontak%20dari%20web.%20Ini%20data%20saya%3A%0ANama%3A%20${nama}%0ANomor%3A%20${nomor_hp}%0AEmail%3A%20${email}%0APesan%3A%20${pesan}`;
+    var link = `https://api.whatsapp.com/send?phone=6288973292196&text=Hi%2C%20saya%20dapat%20kontak%20dari%20web.%20Ini%20data%20saya%3A%0ANama%3A%20${nama}%0AEmail%3A%20${email}%0APesan%3A%20${pesan}`;
 
-    window.open(link,"blank");
+    if (nama === '' || email === '' || pesan === '') {
+         // Tampilkan pesan error di form-message jika ada field kosong
+         $('#form-message').addClass('alert alert-danger').text('Harap isi semua field yang wajib diisi.');
+         return; // Hentikan fungsi
+    }
+
+    window.open(link,"_blank");
 }
