@@ -1,6 +1,6 @@
 # 📖 Tugas UTS | Portofolio
 
-**Live Demo:** https://haiqalaly.github.io/TugasProfileBootstrap
+**Live Demo:** https://haiqal-archive.github.io/UTS-Pemrograman-Web/
 
 ## ℹ️ Deskripsi
 Proyek ini adalah halaman Portofolio Pribadi single-page yang dikembangkan sebagai tugas Ujian Tengah Semester (UTS) untuk mata kuliah Pemrograman Web. 
